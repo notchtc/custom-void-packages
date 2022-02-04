@@ -27,10 +27,10 @@ cp -r custom-void-packages/* void-packages/srcpkgs
 If you haven't used xbps-src before and don't know what to do next, here's what you have to do
 [source,shell]
 cd void-packages
-./xbps-src binary-bootstrap
+\./xbps-src binary-bootstrap
 
 To build a package you need to do this in the void-packages directory
 [source,shell]
-./xbps-src pkg <pkgname>
+\./xbps-src pkg <pkgname>
 
 Now you can either use `xbps-install --repository=/hostdir/binpkgs/ <pkgname>` or `xi <pkgname>` (if you have xtools installed) to install the package.
