@@ -1,0 +1,32 @@
+# Template file for 'dmenu'
+pkgname=dmenu
+version=5.0
+revision=1
+makedepends="libXinerama-devel libXft-devel freetype-devel"
+short_desc="Generic menu for X"
+maintainer="chtc <notnotcha0t1c@protonmail.com>"
+license="MIT"
+homepage="https://github.com/notchtc/dmenu"
+distfiles="https://github.com/notchtc/${pkgname}/archive/refs/tags/${version}.tar.gz"
+checksum=208e5add746296102df804464af58a3137e0c9928e5142ace22ee739165215be
+
+post_patch() {
+	sed -i -e '/CFLAGS/{s/-Os//;s/=/+=/}' \
+		-e '/LDFLAGS/{s/-s//;s/=/+=/}' config.mk
+}
+
+do_build() {
+	sed -i -e "s|^FREETYPEINC|#FREETYPEINC|g" \
+		-e "s|^X11INC|#X11INC|g" \
+		-e "s|^X11LIB|#X11LIB|g" config.mk
+
+	x11inc=$XBPS_CROSS_BASE/usr/include/X11
+	x11lib=$XBPS_CROSS_BASE/usr/lib
+	freetypeinc=$XBPS_CROSS_BASE/usr/include/freetype2
+	make CC="$CC" ${makejobs} X11INC=$x11inc X11LIB=$x11lib FREETYPEINC=$freetypeinc
+}
+
+do_install() {
+	make PREFIX=/usr DESTDIR=${DESTDIR} install
+	vlicense LICENSE
+}

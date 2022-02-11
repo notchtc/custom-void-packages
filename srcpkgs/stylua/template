@@ -1,0 +1,22 @@
+# Template file for 'stylua'
+pkgname=stylua
+version=0.12.2
+revision=1
+#wrksrc=
+hostmakedepends="unzip"
+short_desc="An opinionated Lua code formatter "
+maintainer="chtc <notnotcha0t1c@protonmail.com>"
+license="MPL-2.0"
+homepage="https://github.com/JohnnyMorganz/StyLua/"
+distfiles="${homepage}/releases/download/v${version}/stylua-${version}-linux.zip"
+checksum=a70c83c1a5c101c8aee8541c53a3a7d35bb12c8c88945ce6e89d7ddd1a60ab89
+nostrip=yes
+
+do_extract() {
+    mkdir -p ${DESTDIR}
+    unzip ${XBPS_SRCDISTDIR}/${pkgname}-${version}/stylua-${version}-linux.zip
+}
+
+do_install() {
+    vbin stylua
+}

@@ -2,9 +2,11 @@
 
 This is a custom xbps-src repo that contains packages/changes to existing packages.
 
-This replaces the connman and libXft templates.
-
 Connman now uses iwd by default and the bgra patch is applied onto libXft.
+
+All suckless programs are my own builds.
+
+The rest is probably unchanged.
 
 # How to install
 1. Clone void-packages

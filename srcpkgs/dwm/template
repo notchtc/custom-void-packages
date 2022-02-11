@@ -1,0 +1,25 @@
+# Template file for 'dwm'
+pkgname=dwm
+version=6.3
+revision=1
+build_style=gnu-makefile
+makedepends="libXinerama-devel libXft-devel freetype-devel"
+short_desc="Dynamic window manager for X"
+maintainer="chtc <notnotcha0t1c@protonmail.com>"
+license="MIT"
+homepage="https://github.com/notchtc/dwm"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
+checksum=adea4aa80d84a0f7cf0f37641d2bf086f4ff04490fe2e27db58243d0ce8d213d
+
+do_build() {
+    sed -i "/CFLAGS/s|\${CPPFLAGS}|& $CFLAGS|g" config.mk
+    sed -i "/LDFLAGS/s|\-s|$LDFLAGS|g" config.mk
+    make CC=$CC INCS="-I. -I${XBPS_CROSS_BASE}/usr/include/freetype2" LIBS="-lX11 -lXinerama -lXft -lfontconfig -lX11-xcb -lxcb -lxcb-res"
+}
+
+do_install() {
+    make PREFIX=/usr DESTDIR=$DESTDIR install
+    vinstall README.adoc 644 usr/share/doc/$pkgname
+    vinstall ${FILESDIR}/dwm.desktop 644 usr/share/xsessions
+    vlicense LICENSE
+}

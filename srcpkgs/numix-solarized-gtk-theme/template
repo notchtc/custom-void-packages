@@ -1,0 +1,17 @@
+# Template file for 'numix-solarized-gtk-theme'
+pkgname=numix-solarized-gtk-theme
+version=20210831
+revision=1
+build_style=gnu-makefile
+hostmakedepends="glib-devel gdk-pixbuf sassc inkscape"
+depends="gtk+3 gtk-engine-murrine"
+short_desc="Modern flat theme with a combination of light and dark elements"
+maintainer="chtc <notnotcha0t1c@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Ferdi265/numix-solarized-gtk-theme"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
+checksum=590961dab37a6b370cd948926afbec56e88e5d52914fd1c1238ad57ad8fa94b3
+
+do_install() {
+    make THEME=SolarizedDarkYellow DESTDIR=$DESTDIR install
+}
