@@ -8,7 +8,7 @@ maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/dmenu"
 distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
-checksum=208e5add746296102df804464af58a3137e0c9928e5142ace22ee739165215be
+checksum=1230a2739c74fecc65140552be6ee457ae1e0bf116c7c4ce8dae166935f53bbb
 
 post_patch() {
 	sed -i -e '/CFLAGS/{s/-Os//;s/=/+=/}' \
