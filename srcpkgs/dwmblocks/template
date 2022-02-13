@@ -8,7 +8,7 @@ short_desc="Modular status bar for dwm written in C"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="ISC License"
 homepage="https://github.com/notchtc/dwmblocks"
-distfiles="${homepage}/${pkgname}/archive/refs/tags/${version}.tar.gz"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=22785b40e8daacbdd796842fa347f7d1407ee5b50aa5cfa996d11a54d03aa0e7
 
 do_build() {

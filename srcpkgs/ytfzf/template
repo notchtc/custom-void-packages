@@ -2,7 +2,7 @@
 pkgname=ytfzf
 version=2.1
 revision=1
-depends="jq curl mpv dmenu"
+depends="jq curl mpv dmenu dash"
 short_desc="A posix script to find and watch youtube videos from the terminal"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="GPL-3.0-or-later"
