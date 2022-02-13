@@ -1,13 +1,13 @@
 # Template file for 'dmenu'
 pkgname=dmenu
-version=5.0
+version=5.1
 revision=1
 makedepends="libXinerama-devel libXft-devel freetype-devel"
 short_desc="Generic menu for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/dmenu"
-distfiles="https://github.com/notchtc/${pkgname}/archive/refs/tags/${version}.tar.gz"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=208e5add746296102df804464af58a3137e0c9928e5142ace22ee739165215be
 
 post_patch() {
