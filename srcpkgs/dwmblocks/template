@@ -12,7 +12,7 @@ distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=22785b40e8daacbdd796842fa347f7d1407ee5b50aa5cfa996d11a54d03aa0e7
 
 do_build() {
-    make CC=$CC LIBS="-lX11"
+    make CC=$CC
 }
 
 do_install() {
