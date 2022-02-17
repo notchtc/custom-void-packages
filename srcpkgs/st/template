@@ -10,7 +10,7 @@ depends="ncurses st-terminfo-${version}_${revision}"
 short_desc="Simple terminal implementation for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
-homepage="https://github/notchtc/st"
+homepage="https://github.com/notchtc/st"
 distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=8b4181b7ca2347b84136ea9963f880cd48ea511f0f1cdb3550af3fcc403b5bc6
 
