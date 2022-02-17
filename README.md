@@ -21,7 +21,7 @@ git clone --depth 1 https://github.com/notchtc/custom-void-packages
 
 3. Merge them both
 ```
-cp -r custom-void-packages/* void-packages/srcpkgs
+cp -r custom-void-packages/srcpkgs/* void-packages/srcpkgs/
 ```
 
 If you haven't used xbps-src before and don't know what to do next, here's what you have to do
