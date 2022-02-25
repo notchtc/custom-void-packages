@@ -1,0 +1,6 @@
+diff -Naurp0 a/ytfzf b/ytfzf
+--- a/ytfzf	2022-02-24 16:08:56.561342309 +0100
++++ b/ytfzf	2022-02-24 16:02:00.291557171 +0100
+@@ -192 +192 @@ done
+-: "${YTFZF_SYSTEM_ADDON_DIR:=/usr/local/share/ytfzf/addons}"
++: "${YTFZF_SYSTEM_ADDON_DIR:=/usr/share/ytfzf/addons}"
