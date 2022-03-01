@@ -9,9 +9,9 @@ maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="MirOS"
 homepage="https://www.mirbsd.org/mksh.htm"
 changelog="https://www.mirbsd.org/mksh.htm#clog"
-distfiles="https://github.com/MirBSD/mksh/archive/f72eab94d47dce371fd9a36cea9ff4df048c6fc7.tar.gz"
-wrksrc="${pkgname}-f72eab94d47dce371fd9a36cea9ff4df048c6fc7"
-checksum=fa6e2cbdae1454fa9a5585772c79ffdd2edfd069ace3928aa1f2626b9a974be7
+distfiles="https://github.com/MirBSD/mksh/archive/03ae72e654c218cf85064da8b763e482b4218cba.tar.gz"
+wrksrc="${pkgname}-03ae72e654c218cf85064da8b763e482b4218cba"
+checksum=b54ffa825c563a48afdfa5a30935a9f6ffeb68bc6ad2d27f3cca7d7faa7c9b15
 
 # with the way xbps-src is currently designed, running the test suite will result
 # in the xbps-src process getting suspended during the run, with a message like
