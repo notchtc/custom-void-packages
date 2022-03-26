@@ -12,12 +12,12 @@ distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=adea4aa80d84a0f7cf0f37641d2bf086f4ff04490fe2e27db58243d0ce8d213d
 
 do_build() {
-    make CC=$CC
+	make CC=$CC
 }
 
 do_install() {
-    make PREFIX=/usr DESTDIR=$DESTDIR install
-    vinstall README.adoc 644 usr/share/doc/$pkgname
-    vinstall ${FILESDIR}/dwm.desktop 644 usr/share/xsessions
-    vlicense LICENSE
+	make PREFIX=/usr DESTDIR=$DESTDIR install
+	vinstall README.adoc 644 usr/share/doc/$pkgname
+	vinstall ${FILESDIR}/dwm.desktop 644 usr/share/xsessions
+	vlicense LICENSE
 }
