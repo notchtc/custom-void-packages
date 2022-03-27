@@ -13,5 +13,5 @@ distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=590961dab37a6b370cd948926afbec56e88e5d52914fd1c1238ad57ad8fa94b3
 
 do_install() {
-	make THEME=SolarizedDarkRed DESTDIR=$DESTDIR install
+	make THEME=SolarizedDarkMagenta DESTDIR=$DESTDIR install
 }

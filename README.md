@@ -2,7 +2,7 @@
 
 This is a custom xbps-src repo that contains packages/changes to existing packages.
 
-Connman now uses iwd by default and the bgra patch is applied onto libXft.
+Connman now uses iwd by default and the bgra patch is applied onto libXft, numix-solarized-gtk-theme uses the DarkMagenta variant.
 
 All suckless programs are my own builds.
 
