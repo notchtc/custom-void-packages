@@ -1,0 +1,56 @@
+= Custom Void packages
+chtc <notnotcha0t1c@protonmail.com>
+{docdate}
+
+This repository contains packages/changes to existing packages for xbps-src.
+
+== List of new software
+- https://github.com/pystardust/ani-cli[ani-cli]
+- https://github.com/notchtc/dwmblocks[dwmblocks] (my build)
+- https://github.com/phisch/giph[giph]
+- https://github.com/Ferdi265/numix-solarized-gtk-theme[Numix Solarized] (builds only DarkMagenta variant because I'm too lazy to add building them all)
+- https://github.com/pystardust/ytfzf[ytfzf]
+
+== Changes to existing software
+|===
+|Package|Change
+
+|connman
+|Uses iwd
+
+|libXft
+|Bgra patch is applied
+
+|mksh
+|Use latest git version
+
+|Everything from suckless
+|Uses my own build
+|===
+
+== How to install
+1. Clone void-packages
+[source,shell]
+git clone --depth 1 https://github.com/void-linux/void-packages
+2. Clone this repo
+[source,shell]
+git clone --depth 1 https://github.com/notchtc/custom-void-packages
+3. Merge them both
+[source,shell]
+cp -r custom-void-packages/srcpkgs/* void-packages/srcpkgs/
+
+If you haven't used xbps-src before and don't know what to do next, here's what you have to do:
+[souce,shell]
+----
+cd void-packages
+./xbps-src binary-bootstrap
+echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
+----
+
+To build a package you need to do this in the void-packages directory:
+[source,shell]
+----
+./xbps-src pkg <pkgname>
+----
+
+Now you can either use `xbps-install --repository=/hostdir/binpkgs/ <pkgname>` or `xi <pkgname>` (if you have xtools installed) to install the package.

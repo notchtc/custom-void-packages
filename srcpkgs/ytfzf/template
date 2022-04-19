@@ -1,6 +1,6 @@
 # Template file for 'ytfzf'
 pkgname=ytfzf
-version=2.2
+version=2.3
 revision=1
 depends="jq curl mpv dmenu"
 short_desc="Posix script to find and watch youtube videos from the terminal"
@@ -8,7 +8,7 @@ maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/pystardust/ytfzf"
 distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
-checksum=967de40de90d4143865f6d7597038b2f95bf54c6249b763b91bb1e0b2f59c058
+checksum=09430d9ff4c64ecd0a0e5ff1c5ec31e4e989f7cf1f81986a1f8e72f83c77ef3f
 patch_args="-Np1"
 
 do_install() {
