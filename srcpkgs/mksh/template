@@ -2,12 +2,12 @@
 pkgname=mksh
 version=dd36a4880e631f08b8ba18a6c50eae338e65432a
 revision=1
+wrksrc="${pkgname}-${version}"
 checkdepends="perl ed"
 short_desc="MirBSD Korn Shell"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="MirOS"
 homepage="https://www.mirbsd.org/mksh.htm"
-wrksrc="${pkgname}-${version}"
 changelog="https://www.mirbsd.org/mksh.htm#clog"
 distfiles="https://github.com/MirBSD/mksh/archive/${version}.tar.gz"
 checksum=a3ed74fd548889feefb60fb71b5799e740922a2bdddba0fd2d639a339a9948b8

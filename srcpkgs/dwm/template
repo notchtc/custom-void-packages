@@ -16,8 +16,7 @@ do_build() {
 }
 
 do_install() {
-	make PREFIX=/usr DESTDIR=$DESTDIR install
-	vinstall README.adoc 644 usr/share/doc/$pkgname
-	vinstall ${FILESDIR}/dwm.desktop 644 usr/share/xsessions
+	make DESTDIR=$DESTDIR install
+	vinstall README.md 644 usr/share/doc/$pkgname
 	vlicense LICENSE
 }

@@ -1,0 +1,18 @@
+# Template file for 'wyebadblock'
+pkgname=wyebadblock
+version=1.0.0
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel webkit2gtk-devel glib-devel"
+short_desc="Adblock extension for wyeb, also webkit2gtk browsers"
+maintainer="chtc <notnotcha0t1c@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/jun7/wyebadblock"
+distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
+checksum=90eafff9c6ccc98ecaaaaa3e7be232aa4dd3cd2c5691029041f5e71573b1dbc3
+
+do_install() {
+	make DESTDIR=$DESTDIR install
+	vinstall README.md 644 usr/share/doc/$pkgname
+}
