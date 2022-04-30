@@ -1,6 +1,6 @@
 # Template file for 'dwmblocks'
 pkgname=dwmblocks
-version=1.0
+version=6a013991ae84750719ddd910f2e24f2263f7c8d7
 revision=1
 build_style=gnu-makefile
 makedepends="libX11-devel"
@@ -8,11 +8,13 @@ short_desc="Modular status bar for dwm written in C"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="ISC"
 homepage="https://github.com/notchtc/dwmblocks"
-distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
-checksum=22785b40e8daacbdd796842fa347f7d1407ee5b50aa5cfa996d11a54d03aa0e7
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum=0a60e72799f9a7ffe6cf994a14f7b008a75611693929f7b79d2e166d8c78d014
 
 do_build() {
-	make CC=$CC
+	sed -i "/CFLAGS/s|\${CPPFLAGS}|& $CFLAGS|g" Makefile
+	sed -i "/LDFLAGS/s|\-s|$LDFLAGS|g" Makefile
+	make CC=$CC INCS="-I." LIBS="-lX11"
 }
 
 do_install() {

@@ -2,7 +2,6 @@
 pkgname=mksh
 version=dd36a4880e631f08b8ba18a6c50eae338e65432a
 revision=1
-wrksrc="${pkgname}-${version}"
 checkdepends="perl ed"
 short_desc="MirBSD Korn Shell"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"

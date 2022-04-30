@@ -1,6 +1,6 @@
 # Template file for 'st'
 pkgname=st
-version=0.8.5
+version=dffc0f7e62627fcaa808eb2e0ff42f087c9ac4a5
 revision=1
 build_style=gnu-makefile
 make_use_env=compliant
@@ -11,8 +11,8 @@ short_desc="Simple terminal implementation for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/st"
-distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
-checksum=8b4181b7ca2347b84136ea9963f880cd48ea511f0f1cdb3550af3fcc403b5bc6
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum=5cc0401cede27b9583de574ef475d150c1fb2f71a16df4373b62ba21b7cc0986
 
 pre_build() {
 	# We will use tic after install. See INSTALL.

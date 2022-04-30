@@ -1,6 +1,6 @@
 # Template file for 'slock'
 pkgname=slock
-version=1.4
+version=e02bc9c235054a6f66af112579d125335b1bd536
 revision=1
 hostmakedepends="pkg-config"
 makedepends="libXrandr-devel"
@@ -8,11 +8,14 @@ short_desc="Simple screen locker for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/slock"
-distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
-checksum=384eb65afcb3f5e2c5191a8fb0baf4b65f349d16697e526fe86aab2c18e0c0a3
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum=c450c4586e55c17708ced8783cc3d2fb49c002462269b38a0ee3272a36f269f1
 
 do_build() {
-	make CC=$CC ${makejobs}
+	sed -i 's/CPPFLAGS =/CPPFLAGS +=/g' config.mk
+	sed -i 's/CFLAGS =/CFLAGS +=/g' config.mk
+	sed -i 's/LDFLAGS =/LDFLAGS +=/g' config.mk
+	make CC=$CC INCS="-I." LIBS="-lX11 -lXext -lcrypt -lXrandr" ${makejobs}
 }
 
 do_install() {
