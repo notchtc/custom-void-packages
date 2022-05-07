@@ -1,6 +1,6 @@
 # Template file for 'ani-cli'
 pkgname=ani-cli
-version=2.1
+version=2.2
 revision=1
 depends="curl openssl mpv aria2"
 short_desc="CLI tool to browse and play anime"
@@ -8,7 +8,7 @@ maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/pystardust/ani-cli"
 distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
-checksum=5e4ba037cd2a74e483cf2d9ddfe69335a81ee4d178270b8c6ee946024026ca00
+checksum=973d335a75bd7f920c244000ad6b057f702fb37752e7bea1b5bcf038785ec925
 
 do_install() {
 	vbin ani-cli
