@@ -1,6 +1,6 @@
 # Template file for 'st'
 pkgname=st
-version=9b6e845c373516c7b6444588f6766f9c62694f95
+version=6f10f5131689a5b70ab3d31dc8fc8fcc7d2f15a3
 revision=1
 build_style=gnu-makefile
 make_use_env=compliant
@@ -12,7 +12,7 @@ maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/st"
 distfiles="${homepage}/archive/${version}.tar.gz"
-checksum=2ff3fe2393425feb3d9119b67de0eb35129993de3a3609e26602711eee618a39
+checksum=5dcb1cbf39d5ceeed673c77086cdb1c81f57c5dce306790b583c5c02218877da
 
 pre_build() {
 	# We will use tic after install. See INSTALL.

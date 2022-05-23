@@ -1,0 +1,23 @@
+# Template file for 'tym'
+pkgname=tym
+version=3.2.0
+revision=1
+build_style=gnu-configure
+hostmakedepends="automake autoconf pkg-config"
+makedepends="vte3-devel lua-devel"
+short_desc="Lua-configurable terminal emulator"
+maintainer="chtc <notnotcha0t1c@protonmail.com>"
+license="MIT"
+homepage="https://github.com/endaaman/tym"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
+checksum=f7a71bb4a9451cc92082abb9da7b0a89f4e44f5e829bd4cee9598c81f3fbd3a6
+
+pre_configure() {
+	autoreconf -fi
+}
+
+do_install() {
+	make PREFIX=/usr DESTDIR=$DESTDIR install
+	vlicense LICENSE
+	vinstall README.md 644 usr/share/doc/$pkgname
+}

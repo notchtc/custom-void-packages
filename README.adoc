@@ -10,6 +10,7 @@ This repository contains packages/changes to existing packages for xbps-src.
 - https://github.com/phisch/giph[giph]
 - https://github.com/jun7/wyebadblocker[wyebadblock] && wyebadblock-vimb (just installs it in vimb location)
 - https://github.com/Ferdi265/numix-solarized-gtk-theme[Numix Solarized] (builds only DarkMagenta variant because I'm too lazy to add building them all)
+- https://github.com/endaaman/tym[tym]
 - https://github.com/pystardust/ytfzf[ytfzf]
 
 == Changes to existing software
