@@ -2,6 +2,8 @@
 pkgname=st
 version=0.8.5
 revision=1
+_commit="6f10f5131689a5b70ab3d31dc8fc8fcc7d2f15a3"
+wrksrc="${pkgname}-${_commit}"
 build_style=gnu-makefile
 make_use_env=compliant
 hostmakedepends="pkg-config"
@@ -11,7 +13,7 @@ short_desc="Simple terminal implementation for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/st"
-distfiles="${homepage}/archive/6f10f5131689a5b70ab3d31dc8fc8fcc7d2f15a3.tar.gz"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum=5dcb1cbf39d5ceeed673c77086cdb1c81f57c5dce306790b583c5c02218877da
 
 pre_build() {

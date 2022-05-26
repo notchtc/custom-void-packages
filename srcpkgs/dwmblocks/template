@@ -2,13 +2,15 @@
 pkgname=dwmblocks
 version=1.0
 revision=1
+_commit="6a013991ae84750719ddd910f2e24f2263f7c8d7"
+wrksrc="${pkgname}-${_commit}"
 build_style=gnu-makefile
 makedepends="libX11-devel"
 short_desc="Modular status bar for dwm written in C"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="ISC"
 homepage="https://github.com/notchtc/dwmblocks"
-distfiles="${homepage}/archive/6a013991ae84750719ddd910f2e24f2263f7c8d7.tar.gz"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum=0a60e72799f9a7ffe6cf994a14f7b008a75611693929f7b79d2e166d8c78d014
 
 do_build() {

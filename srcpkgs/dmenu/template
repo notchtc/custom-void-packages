@@ -2,12 +2,14 @@
 pkgname=dmenu
 version=5.1
 revision=1
+_commit="023ce62c5281ad2a7e8e2ccbaf5b82c0e77c48b3"
+wrksrc="${pkgname}-${_commit}"
 makedepends="libXinerama-devel libXft-devel freetype-devel"
 short_desc="Generic menu for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/dmenu"
-distfiles="${homepage}/archive/023ce62c5281ad2a7e8e2ccbaf5b82c0e77c48b3.tar.gz"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum=8236f6d415a050192fa3e1ddf53526d96db9f7d6a42ec470a3121743f602f507
 
 post_patch() {

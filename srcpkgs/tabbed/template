@@ -2,13 +2,15 @@
 pkgname=tabbed
 version=0.6
 revision=4
+_commit="b357b3c96e9a28f8ff0dada206acb6c00ca334f9"
+wrksrc="${pkgname}-${_commit}"
 build_style=gnu-makefile
 makedepends="libX11-devel libXft-devel freetype-devel"
 short_desc="Tab interface for application supporting Xembed"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/tabbed"
-distfiles="${homepage}/archive/b357b3c96e9a28f8ff0dada206acb6c00ca334f9.tar.gz"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum=6941afba0fdc048bced95b7f4acb891ad1244865be26d278b76f2ea6f19360b2
 
 do_build() {

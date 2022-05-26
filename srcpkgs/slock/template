@@ -2,13 +2,15 @@
 pkgname=slock
 version=1.4
 revision=1
+_commit="e02bc9c235054a6f66af112579d125335b1bd536"
+wrksrc="${pkgname}-${_commit}"
 hostmakedepends="pkg-config"
 makedepends="libXrandr-devel"
 short_desc="Simple screen locker for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/slock"
-distfiles="${homepage}/archive/e02bc9c235054a6f66af112579d125335b1bd536.tar.gz"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum=c450c4586e55c17708ced8783cc3d2fb49c002462269b38a0ee3272a36f269f1
 
 do_build() {
