@@ -1,6 +1,6 @@
 # Template file for 'dwm'
 pkgname=dwm
-version=c3935b14f62c9f81db1801f3a877ee59ac52ef2f
+version=6.3
 revision=1
 build_style=gnu-makefile
 makedepends="libXinerama-devel libXft-devel freetype-devel"
@@ -8,7 +8,7 @@ short_desc="Dynamic window manager for X"
 maintainer="chtc <notnotcha0t1c@protonmail.com>"
 license="MIT"
 homepage="https://github.com/notchtc/dwm"
-distfiles="${homepage}/archive/${version}.tar.gz"
+distfiles="${homepage}/archive/c3935b14f62c9f81db1801f3a877ee59ac52ef2f.tar.gz"
 checksum=94d5b8db3ab8c900395edb81529939f8b91236250e3fadb567ecdcfab1ed7a0b
 
 do_build() {
