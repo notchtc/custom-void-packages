@@ -12,13 +12,10 @@ homepage="https://github.com/notchtc/dmenu"
 distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum=8236f6d415a050192fa3e1ddf53526d96db9f7d6a42ec470a3121743f602f507
 
-post_patch() {
-	sed -i -e '/CFLAGS/{s/-Os//;s/=/+=/}' \
-		-e '/LDFLAGS/{s/-s//;s/=/+=/}' config.mk
-}
-
 do_build() {
-	sed -i -e "s|^FREETYPEINC|#FREETYPEINC|g" \
+	sed -i '/CFLAGS/{s/-Os//;s/=/+=/}' \
+		-e '/LDFLAGS/{s/-s//;s/=/+=/}' \
+		-e "s|^FREETYPEINC|#FREETYPEINC|g" \
 		-e "s|^X11INC|#X11INC|g" \
 		-e "s|^X11LIB|#X11LIB|g" config.mk
 

@@ -12,7 +12,6 @@ homepage="https://github.com/jun7/wyebadblock"
 distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
 checksum=90eafff9c6ccc98ecaaaaa3e7be232aa4dd3cd2c5691029041f5e71573b1dbc3
 
-do_install() {
-	make DESTDIR=$DESTDIR install
+post_install() {
 	vinstall README.md 644 usr/share/doc/$pkgname
 }

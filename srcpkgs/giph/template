@@ -11,8 +11,7 @@ homepage="https://github.com/phisch/giph"
 distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
 checksum=09fc964cc3cfcd942d5d2983667b65bf126fbfbba53cdcfb80fe3d87d1240667
 
-do_install() {
-	make PREFIX=/usr DESTDIR=$DESTDIR install
+post_install() {
 	vinstall README.md 644 usr/share/doc/$pkgname
 	vlicense LICENSE
 }

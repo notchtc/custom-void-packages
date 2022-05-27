@@ -16,8 +16,7 @@ pre_configure() {
 	autoreconf -fi
 }
 
-do_install() {
-	make PREFIX=/usr DESTDIR=$DESTDIR install
+post_install() {
 	vlicense LICENSE
 	vinstall README.md 644 usr/share/doc/$pkgname
 }
