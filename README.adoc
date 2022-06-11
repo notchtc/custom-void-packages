@@ -1,6 +1,17 @@
 = Custom Void packages
 chtc <notnotcha0t1c@protonmail.com>
 {docdate}
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+IMPORTANT: I'm currently using Fedora so this repo won't be updated
 
 This repository contains packages/changes to existing packages for xbps-src.
 
